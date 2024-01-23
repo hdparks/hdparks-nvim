@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["neodev.nvim"] = {
+    loaded = true,
+    path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+    url = "https://github.com/folke/neodev.nvim"
+  },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
     loaded = true,
@@ -140,6 +145,11 @@ _G.packer_plugins = {
     path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  pompom = {
+    loaded = true,
+    path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/pompom",
+    url = "https://github.com/hdparks/pompom"
+  },
   ["prettier.nvim"] = {
     loaded = true,
     path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/prettier.nvim",
@@ -156,10 +166,10 @@ _G.packer_plugins = {
     path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-be-good"] = {
+  ["vim-apm"] = {
     loaded = true,
-    path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/vim-be-good",
-    url = "https://github.com/ThePrimeagen/vim-be-good"
+    path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/vim-apm",
+    url = "https://github.com/ThePrimeagen/vim-apm"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -170,6 +180,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/vim-dadbod",
     url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-dadbod-completion"] = {
+    loaded = true,
+    path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/vim-dadbod-completion",
+    url = "https://github.com/kristijanhusak/vim-dadbod-completion"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/Users/hparkinson/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
+    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   },
   ["vim-fugitive"] = {
     loaded = true,

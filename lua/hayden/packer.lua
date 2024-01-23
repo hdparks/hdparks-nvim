@@ -15,7 +15,11 @@ return require('packer').startup(function(use)
 	})
 	use('nvim-treesitter/nvim-treesitter', {run=':TSUpdate'})
 	use('nvim-treesitter/playground')
-	use('ThePrimeagen/harpoon')
+	use('ThePrimeagen/vim-apm')
+	use{'ThePrimeagen/harpoon',
+		branch = "harpoon2",
+		requires = { {"nvim-lua/plenary.nvim"} },
+	}
 	use {
 		  'VonHeikemen/lsp-zero.nvim',
 		  branch = 'v2.x',
@@ -44,6 +48,9 @@ return require('packer').startup(function(use)
 	use('tpope/vim-fugitive')
 	use('tpope/vim-commentary')
 	use('tpope/vim-dadbod')
-  	use('ThePrimeagen/vim-be-good')
+	use('kristijanhusak/vim-dadbod-ui')
+	use('kristijanhusak/vim-dadbod-completion')
+	use('folke/neodev.nvim')
+	use('hdparks/pompom')
 
 end)
