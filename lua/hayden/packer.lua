@@ -51,6 +51,18 @@ return require('packer').startup(function(use)
 	use('kristijanhusak/vim-dadbod-ui')
 	use('kristijanhusak/vim-dadbod-completion')
 	use('folke/neodev.nvim')
-	use('hdparks/pompom')
+	use {
+		'epwalsh/obsidian.nvim', tag="*",
+		requires={{"nvim-lua/plenary.nvim"}}
+	}
+	use{'pwntester/octo.nvim',
+		requires= {
+			'nvim-lua/plenary.nvim',
+			'nvim-telescope/telescope.nvim',
+			'nvim-tree/nvim-web-devicons',
+		}
+	}
+	--use('hdparks/pompom')
+	use("~/github/pompom")
 
 end)
