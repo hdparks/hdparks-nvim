@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
 		'epwalsh/obsidian.nvim', tag="*",
 		requires={{"nvim-lua/plenary.nvim"}}
 	}
+	use('nvim-tree/nvim-web-devicons')
 	use{'pwntester/octo.nvim',
 		requires= {
 			'nvim-lua/plenary.nvim',
