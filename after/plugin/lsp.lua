@@ -14,8 +14,23 @@ end
 local lsp = require('lsp-zero')
 lsp.preset("recommended")
 --  lua setup
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+local lspconfig = require('lspconfig')
+lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
 
+local mason_registry = require('mason-registry')
+local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
+lspconfig.tsserver.setup {
+	init_options = {
+		plugins = {
+			{
+				name = "@vue/typescript-plugin",
+				location = vue_language_server_path,
+				languages = { 'vue' },
+			},
+		},
+	},
+	filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue'},
+}
 lsp.setup()
 
 vim.keymap.set({"n","v"},"<leader>s",function() vim.lsp.buf.code_action() end)

@@ -92,16 +92,13 @@ return require('packer').startup(function(use)
 	use('kristijanhusak/vim-dadbod-completion')
 	use('folke/neodev.nvim')
 	use {
-		'epwalsh/obsidian.nvim', tag="*",
+		'epwalsh/obsidian.nvim',
 		requires={{"nvim-lua/plenary.nvim"}}
 	}
 	use('nvim-tree/nvim-web-devicons')
-	use{'pwntester/octo.nvim',
-		requires= {
-			'nvim-lua/plenary.nvim',
-			'nvim-telescope/telescope.nvim',
-			'nvim-tree/nvim-web-devicons',
-		}
+	use {
+		'linguini1/pulse.nvim',
+		config=function() require('pulse').setup() end
 	}
 	use('hdparks/pompom')
 

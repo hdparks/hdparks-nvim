@@ -1,3 +1,7 @@
+vim.o.tabstop = 2;
+vim.o.shiftwidth = 2;
+vim.o.expandtab = true;
+
 local port = os.getenv('GDScript_Port') or '6005'
 local cmd = {'ncat', '127.0.0.1', port}
 local pipe = [[\\.\pipe\godot.pipe]]
