@@ -100,9 +100,11 @@ return require('packer').startup(function(use)
 		'linguini1/pulse.nvim',
 		config=function() require('pulse').setup() end
 	}
-	use('hdparks/pompom')
+	--use('hdparks/pompom')
+    use('~/github/pompom')
 	use('mfussenegger/nvim-dap')
 	use { "rcarriga/nvim-dap-ui", requires={"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 	use('dhruvasagar/vim-table-mode')
+    use('github/copilot.vim')
 
 end)

@@ -16,8 +16,9 @@ dap.configurations.cs = {
 	},
 }
 
-vim.keymap.set("n","<leader>b",function() require'dap'.toggle_breakpoint() end)
-vim.keymap.set("n","<leader>dr",function() require'dap'.repl.open() end)
+-- vim.keymap.set("n","<leader>b",function() require'dap'.toggle_breakpoint() end)
+-- Note: gonna conflict with markdown <leader>d to toggle "done" -- maybe find different dap leader key
+-- vim.keymap.set("n","<leader>dr",function() require'dap'.repl.open() end)
 
 local dapui = require('dapui')
 
