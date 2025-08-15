@@ -12,3 +12,4 @@ vim.filetype.add({
 		comp = "glsl",
 	}
 })
+vim.lsp.enable('pyright')

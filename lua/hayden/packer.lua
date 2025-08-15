@@ -47,12 +47,6 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use({ 'rose-pine/neovim', 
-	as = 'rose-pine', 
-	config=function()
-		vim.cmd('colorscheme rose-pine')
-	end
-	})
 	use('nvim-treesitter/nvim-treesitter', {run=':TSUpdate'})
 	use('nvim-treesitter/playground')
 	use('ThePrimeagen/vim-apm')
@@ -60,26 +54,7 @@ return require('packer').startup(function(use)
 		branch = "harpoon2",
 		requires = { {"nvim-lua/plenary.nvim"} },
 	}
-	use {
-		  'VonHeikemen/lsp-zero.nvim',
-		  branch = 'v2.x',
-		  requires = {
-		    -- LSP Support
-		    {'neovim/nvim-lspconfig'},             -- Required
-		    {                                      -- Optional
-		      'williamboman/mason.nvim',
-		      run = function()
-			pcall(vim.api.nvim_command, 'MasonUpdate')
-		      end,
-		    },
-		    {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-		    -- Autocompletion
-		    {'hrsh7th/nvim-cmp'},     -- Required
-		    {'hrsh7th/cmp-nvim-lsp'}, -- Required
-		    {'L3MON4D3/LuaSnip'},     -- Required
-	    }
-	}
+    use('neovim/nvim-lspconfig')
 	use {
 		"windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
@@ -90,7 +65,6 @@ return require('packer').startup(function(use)
 	use('tpope/vim-dadbod')
 	use('kristijanhusak/vim-dadbod-ui')
 	use('kristijanhusak/vim-dadbod-completion')
-	use('folke/neodev.nvim')
 	use {
 		'epwalsh/obsidian.nvim',
 		requires={{"nvim-lua/plenary.nvim"}}
@@ -106,5 +80,8 @@ return require('packer').startup(function(use)
 	use { "rcarriga/nvim-dap-ui", requires={"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 	use('dhruvasagar/vim-table-mode')
     use('github/copilot.vim')
+    use('hrsh7th/nvim-cmp')
+    use('mason-org/mason.nvim')
+    use({'rose-pine/neovim', as = 'rose-pine' })
 
 end)
