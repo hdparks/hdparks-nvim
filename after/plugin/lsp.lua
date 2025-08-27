@@ -63,6 +63,7 @@ vim.lsp.enable('lua_ls')
 -- lsp-related keymaps
 vim.keymap.set({"n","v"},"<leader>s",function() vim.lsp.buf.code_action() end)
 vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true, silent = true })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
 -- Enter to select
 local cmp = require('cmp')
 
